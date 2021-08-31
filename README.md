@@ -51,6 +51,9 @@ And click on *References*.
 
 ## Exercises
 
-To start working on exercise, open it as a folder in Visual Studio Code and run `npm install`
+To start working on exercise, open it as a folder in Visual Studio Code and run `npm install`.
+
+
+
 
 ### [🎬 SQL Movies](./sql-movies)
