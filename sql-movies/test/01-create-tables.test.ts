@@ -12,7 +12,7 @@ import {
 import { tableInfo, indexList } from "../src/queries/table-info";
 
 const CREATE_MOVIES_TABLE = `create table ${MOVIES}(
-  id integer NOT NULL Primary Key,
+  id integer not null Primary Key,
   imdb_id text not null,
   popularity real not null,
   budget real not null,
