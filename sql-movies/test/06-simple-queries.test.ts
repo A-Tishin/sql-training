@@ -94,7 +94,7 @@ describe("Simple Queries", () => {
                     SUBSTRING(release_date, 0, 5) AS year
                     FROM movies 
                     GROUP BY year 
-                    ORDER BY year desc`;
+                    ORDER BY year DESC`;
       const result = await db.selectMultipleRows(query);
 
       expect(result.length).toBe(8);
@@ -124,6 +124,7 @@ describe("Simple Queries", () => {
       const query = `SELECT user_id, COUNT(user_id) AS count
                     FROM movie_ratings 
                     GROUP BY user_id 
+                    
                     ORDER BY count DESC LIMIT 3`;
       const result = await db.selectMultipleRows(query);
 
