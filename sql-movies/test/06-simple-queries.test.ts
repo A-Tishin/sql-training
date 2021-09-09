@@ -123,8 +123,7 @@ describe("Simple Queries", () => {
     async done => {
       const query = `SELECT user_id, COUNT(user_id) AS count
                     FROM movie_ratings 
-                    GROUP BY user_id 
-                    
+                    GROUP BY user_id
                     ORDER BY count DESC LIMIT 3`;
       const result = await db.selectMultipleRows(query);
 
