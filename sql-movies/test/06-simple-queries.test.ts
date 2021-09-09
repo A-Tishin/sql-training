@@ -91,7 +91,7 @@ describe("Simple Queries", () => {
     "should select count of movies released every year",
     async done => {
       const query = `SELECT COUNT(release_date) AS count, 
-                    SUBSTRING(release_date, 0, 5) AS year
+                    SUBSTR(release_date, 0, 5) AS year
                     FROM movies 
                     GROUP BY year 
                     ORDER BY year DESC`;
@@ -150,8 +150,8 @@ describe("Simple Queries", () => {
   it(
     "should select count of ratings left each month",
     async done => {
-      const query = `SELECT COUNT(SUBSTRING(time_created, 6, 2)) AS count,
-                    SUBSTRING(time_created, 6, 2) AS month
+      const query = `SELECT COUNT(SUBSTR(time_created, 6, 2)) AS count,
+                    SUBSTR(time_created, 6, 2) AS month
                     FROM movie_ratings 
                     GROUP BY month 
                     ORDER BY count desc`;
